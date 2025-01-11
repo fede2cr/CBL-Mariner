@@ -58,6 +58,8 @@ func TestShouldReturnCorrectRequiredPackagesForArch(t *testing.T) {
 		assert.Equal(t, arm64RequiredPackages, requiredPackages)
 	case "amd64":
 		assert.Equal(t, amd64RequiredPackages, requiredPackages)
+	case "riscv64":
+		assert.Equal(t, amd64RequiredPackages, requiredPackages)
 	default:
 		assert.Fail(t, "unknown GOARCH detected: "+arch)
 	}
